@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCS Preliminary — 6-Month Study Routine</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bangla: #ef4444;
+      --english: #3b82f6;
+      --bd: #16a34a;
+      --intl: #8b5cf6;
+      --math: #f97316;
+      --science: #06b6d4;
+      --computer: #eab308;
+      --geo: #84cc16;
+      --mental: #ec4899;
+      --ethics: #64748b;
+      --mock: #0f172a;
+      --revision: #475569;
+
+      --bangla-bg: rgba(239, 68, 68, 0.12);
+      --english-bg: rgba(59, 130, 246, 0.12);
+      --bd-bg: rgba(22, 163, 74, 0.12);
+      --intl-bg: rgba(139, 92, 246, 0.12);
+      --math-bg: rgba(249, 115, 22, 0.12);
+      --science-bg: rgba(6, 182, 212, 0.12);
+      --computer-bg: rgba(234, 179, 8, 0.12);
+      --geo-bg: rgba(132, 204, 22, 0.12);
+      --mental-bg: rgba(236, 72, 153, 0.12);
+      --ethics-bg: rgba(100, 116, 139, 0.12);
+      --mock-bg: rgba(15, 23, 42, 0.5);
+      --revision-bg: rgba(71, 85, 105, 0.2);
+
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --dark: #0f172a;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --text: #1e293b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: var(--dark);
+      padding: 40px 32px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(45deg,
+          transparent, transparent 20px,
+          rgba(255, 255, 255, 0.015) 20px, rgba(255, 255, 255, 0.015) 21px);
+    }
+
+    .header-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .header-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #94a3b8;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      padding: 5px 12px;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .header h1 {
+      font-size: clamp(26px, 4vw, 44px);
+      font-weight: 900;
+      color: #f1f5f9;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .header h1 span {
+      color: #ef4444;
+    }
+
+    .header-sub {
+      color: #64748b;
+      font-size: 14px;
+      margin-top: 10px;
+      font-weight: 400;
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .stat {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 14px 20px;
+      min-width: 100px;
+    }
+
+    .stat-n {
+      font-size: 24px;
+      font-weight: 800;
+      color: #f1f5f9;
+      line-height: 1;
+    }
+
+    .stat-l {
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 4px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ── LEGEND ── */
+    .legend-wrap {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 20px 32px;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .leg {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .leg-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .freq {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      background: rgba(0, 0, 0, 0.06);
+      border-radius: 3px;
+      padding: 1px 4px;
+      margin-left: 2px;
+    }
+
+    /* ── TEMPLATE BOX ── */
+    .template-wrap {
+      max-width: 1600px;
+      margin: 28px auto 0;
+      padding: 0 32px;
+    }
+
+    .template-card {
+      background: var(--dark);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .template-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 16px;
+    }
+
+    .template-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 1px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .tg-head {
+      background: #1e293b;
+      padding: 10px 8px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #94a3b8;
+      text-align: center;
+    }
+
+    .tg-head.weekend {
+      color: #f59e0b;
+    }
+
+    .tg-cell {
+      background: #162032;
+      padding: 8px 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .mini-pill {
+      border-radius: 5px;
+      padding: 5px 7px;
+      font-size: 10.5px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .mini-pill small {
+      display: block;
+      font-size: 9px;
+      font-weight: 400;
+      opacity: 0.7;
+      margin-top: 1px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* pill variants */
+    .p-bangla {
+      background: var(--bangla);
+    }
+
+    .p-english {
+      background: var(--english);
+    }
+
+    .p-bd {
+      background: var(--bd);
+    }
+
+    .p-intl {
+      background: var(--intl);
+    }
+
+    .p-math {
+      background: var(--math);
+    }
+
+    .p-science {
+      background: var(--science);
+      color: #0f172a;
+    }
+
+    .p-computer {
+      background: var(--computer);
+      color: #0f172a;
+    }
+
+    .p-geo {
+      background: var(--geo);
+      color: #0f172a;
+    }
+
+    .p-mental {
+      background: var(--mental);
+    }
+
+    .p-ethics {
+      background: var(--ethics);
+    }
+
+    .p-mock {
+      background: #334155;
+      border: 1px solid #475569;
+    }
+
+    .p-revision {
+      background: #1e3a5f;
+      border: 1px solid #2d5a9e;
+    }
+
+    /* ── MAIN SCHEDULE ── */
+    .schedule-wrap {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 32px 60px;
+    }
+
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 32px 0 16px;
+      padding: 16px 22px;
+      border-radius: 12px;
+      border-left: 4px solid;
+    }
+
+    .ph1 {
+      background: rgba(239, 68, 68, 0.07);
+      border-color: #ef4444;
+    }
+
+    .ph2 {
+      background: rgba(59, 130, 246, 0.07);
+      border-color: #3b82f6;
+    }
+
+    .ph3 {
+      background: rgba(22, 163, 74, 0.07);
+      border-color: #16a34a;
+    }
+
+    .ph4 {
+      background: rgba(236, 72, 153, 0.07);
+      border-color: #ec4899;
+    }
+
+    .ph-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .ph-title {
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+
+    .ph-weeks {
+      margin-left: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      background: rgba(0, 0, 0, 0.05);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    /* week table */
+    .week-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .week-table thead th {
+      background: var(--dark);
+      color: #94a3b8;
+      padding: 10px 12px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    .week-table thead th.wkend {
+      color: #f59e0b;
+    }
+
+    .week-table thead th.row-label {
+      color: #475569;
+      min-width: 80px;
+      width: 80px;
+    }
+
+    .week-table td {
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+      width: calc((100% - 80px) / 7);
+    }
+
+    .row-label-cell {
+      background: #f8fafc;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      width: 80px;
+      vertical-align: middle;
+      text-align: center;
+      border-right: 2px solid var(--border) !important;
+    }
+
+    .pill {
+      display: block;
+      border-radius: 6px;
+      padding: 6px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.35;
+      margin-bottom: 4px;
+    }
+
+    .pill:last-child {
+      margin-bottom: 0;
+    }
+
+    .pill small {
+      display: block;
+      font-size: 9.5px;
+      font-weight: 400;
+      opacity: 0.75;
+      margin-top: 2px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    td.wkend-cell {
+      background: #fffbeb;
+    }
+
+    .week-num-row td,
+    .week-num-row th {
+      background: var(--dark) !important;
+      color: #f1f5f9 !important;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 8px 10px;
+      letter-spacing: 0.5px;
+      border-color: #1e293b !important;
+    }
+
+    .week-num-row .wk-badge {
+      background: rgba(239, 68, 68, 0.2);
+      color: #fca5a5;
+      border-radius: 4px;
+      padding: 2px 7px;
+      font-size: 10px;
+    }
+
+    /* ── PRINT / DL ── */
+    .dl-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--dark);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 50px;
+      padding: 13px 24px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+      transition: transform .2s, box-shadow .2s;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dl-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    .dl-btn::before {
+      content: '⬇';
+      font-size: 15px;
+    }
+
+    @media print {
+      .dl-btn {
+        display: none !important;
+      }
+
+      body {
+        background: #fff;
+        font-size: 10px;
+      }
+
+      .header {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .pill,
+      .mini-pill,
+      .phase-header,
+      .tg-cell,
+      .tg-head,
+      .template-card,
+      .week-num-row td {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .week-table {
+        page-break-inside: avoid;
+      }
+
+      .phase-header {
+        page-break-before: auto;
+      }
+
+      .schedule-wrap {
+        padding: 0 16px 40px;
+      }
+
+      .template-wrap {
+        padding: 0 16px;
+      }
+
+      .header {
+        padding: 24px 16px;
+      }
+
+      .legend-wrap {
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-inner">
+      <div class="header-top">
+        <div>
+          <!-- <div class="header-label">BCS Preliminary · Live MCQ</div> -->
+          <h1>6-Month <span>Study</span> Routine</h1>
+          <p class="header-sub">All 10 subjects every week · Mixed daily · 2–3 subjects/weekday · 3–4 subjects/weekend
+          </p>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-n">26</div>
+          <div class="stat-l">Weeks</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">~576h</div>
+          <div class="stat-l">Study Time</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">200</div>
+          <div class="stat-l">Total Marks</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">10</div>
+          <div class="stat-l">Subjects</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">4×</div>
+          <div class="stat-l">Grand Mocks/Phase</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEGEND -->
+  <div class="legend-wrap">
+    <div class="leg" style="background:var(--bangla-bg)">
+      <div class="leg-dot" style="background:var(--bangla)"></div>Bangla <span class="freq">4×/wk</span>
+    </div>
+    <div class="leg" style="background:var(--english-bg)">
+      <div class="leg-dot" style="background:var(--english)"></div>English <span class="freq">4×/wk</span>
+    </div>
+    <div class="leg" style="background:var(--bd-bg)">
+      <div class="leg-dot" style="background:var(--bd)"></div>Bangladesh Affairs <span class="freq">3×/wk</span>
+    </div>
+    <div class="leg" style="background:var(--intl-bg)">
+      <div class="leg-dot" style="background:var(--intl)"></div>International Affairs <span class="freq">3×/wk</span>
+    </div>
+    <div class="leg" style="background:var(--math-bg)">
+      <div class="leg-dot" style="background:var(--math)"></div>Math <span class="freq">2×/wk</span>
+    </div>
+    <div class="leg" style="background:var(--science-bg)">
+      <div class="leg-dot" style="background:var(--science)"></div>Science <span class="freq">2×/wk</span>
+    </div>
+    <div class="leg" style="background:var(--computer-bg)">
+      <div class="leg-dot" style="background:var(--computer)"></div>Computer & ICT <span class="freq">1×/wk</span>
+    </div>
+    <div class="leg" style="background:var(--geo-bg)">
+      <div class="leg-dot" style="background:var(--geo)"></div>Geography <span class="freq">2×/wk</span>
+    </div>
+    <div class="leg" style="background:var(--mental-bg)">
+      <div class="leg-dot" style="background:var(--mental)"></div>Mental Ability <span class="freq">1×/wk</span>
+    </div>
+    <div class="leg" style="background:var(--ethics-bg)">
+      <div class="leg-dot" style="background:var(--ethics)"></div>Ethics & Gov. <span class="freq">1×/wk</span>
+    </div>
+    <div class="leg" style="background:#f1f5f9">
+      <div class="leg-dot" style="background:#334155"></div>Mock Test
+    </div>
+    <div class="leg" style="background:#f1f5f9">
+      <div class="leg-dot" style="background:#1e3a5f"></div>Revision
+    </div>
+  </div>
+
+  <!-- WEEKLY TEMPLATE -->
+  <div class="template-wrap">
+    <div class="template-card">
+      <!-- <div class="template-title">📅 Fixed Weekly Template — Repeats Every Week (Topics change, structure stays)</div> -->
+      <div class="template-grid">
+        <!-- header row -->
+        <div class="tg-head">MON<br><span style="font-size:9px;opacity:.6">2–3h</span></div>
+        <div class="tg-head">TUE<br><span style="font-size:9px;opacity:.6">2–3h</span></div>
+        <div class="tg-head">WED<br><span style="font-size:9px;opacity:.6">2–3h</span></div>
+        <div class="tg-head">THU<br><span style="font-size:9px;opacity:.6">2–3h</span></div>
+        <div class="tg-head">FRI<br><span style="font-size:9px;opacity:.6">2–3h</span></div>
+        <div class="tg-head weekend">SAT<br><span style="font-size:9px;opacity:.6">6h</span></div>
+        <div class="tg-head weekend">SUN<br><span style="font-size:9px;opacity:.6">6h</span></div>
+        <!-- rows -->
+        <div class="tg-cell">
+          <div class="mini-pill p-bangla">Bangla<small>1.5h</small></div>
+        </div>
+        <div class="tg-cell">
+          <div class="mini-pill p-bangla">Bangla<small>1.5h</small></div>
+        </div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-bangla">Bangla<small>1h</small></div>
+        </div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-bangla">Bangla<small>1.5h</small></div>
+        </div>
+
+        <div class="tg-cell">
+          <div class="mini-pill p-english">English<small>1h</small></div>
+        </div>
+        <div class="tg-cell">
+          <div class="mini-pill p-english">English<small>1h</small></div>
+        </div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-english">English<small>1.5h</small></div>
+        </div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-english">English<small>1.5h</small></div>
+        </div>
+
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-bd">BD Affairs<small>1.5h</small></div>
+        </div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-bd">BD Affairs<small>1.5h</small></div>
+        </div>
+        <div class="tg-cell"></div>
+        <!-- wait, BD needs 3x. Let me put: Wed + Sat + Sun -->
+
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-intl">Intl Affairs<small>1.5h</small></div>
+        </div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-intl">Intl Affairs<small>1.5h</small></div>
+        </div>
+        <div class="tg-cell">
+          <div class="mini-pill p-intl">Intl Affairs<small>1h</small></div>
+        </div>
+
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-math">Math<small>1h</small></div>
+        </div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-math">Math<small>1h</small></div>
+        </div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-science" style="color:#0f172a">Science<small>1h</small></div>
+        </div>
+        <div class="tg-cell">
+          <div class="mini-pill p-science" style="color:#0f172a">Science<small>1.5h</small></div>
+        </div>
+        <div class="tg-cell"></div>
+
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-computer" style="color:#0f172a">Computer<small>0.5h</small></div>
+        </div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-geo" style="color:#0f172a">Geography<small>0.5h</small></div>
+        </div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-geo" style="color:#0f172a">Geography<small>1h</small></div>
+        </div>
+        <div class="tg-cell"></div>
+
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-mental">Mental<small>1h</small></div>
+        </div>
+
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-ethics">Ethics<small>0.5h</small></div>
+        </div>
+        <div class="tg-cell"></div>
+
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell"></div>
+        <div class="tg-cell">
+          <div class="mini-pill p-revision">Rev<small>1h</small></div>
+        </div>
+        <div class="tg-cell">
+          <div class="mini-pill p-mock">Mock<small>2h</small></div>
+        </div>
+      </div>
+      <div
+        style="margin-top:14px;padding:10px 14px;background:rgba(255,255,255,0.04);border-radius:8px;font-size:11.5px;color:#94a3b8;line-height:1.6;">
+        <strong style="color:#f1f5f9">MON:</strong> Bangla(1.5h) + English(1h) &nbsp;|&nbsp;
+        <strong style="color:#f1f5f9">TUE:</strong> Bangla(1.5h) + English(1h) &nbsp;|&nbsp;
+        <strong style="color:#f1f5f9">WED:</strong> BD Affairs(1.5h) + Math(1h) &nbsp;|&nbsp;
+        <strong style="color:#f1f5f9">THU:</strong> Intl Affairs(1.5h) + Geo(0.5h) &nbsp;|&nbsp;
+        <strong style="color:#f1f5f9">FRI:</strong> English(1.5h) + Math(1h) + Science(1h) + Computer(0.5h)
+        &nbsp;|&nbsp;
+        <strong style="color:#f1f5f9">SAT:</strong> BD(1.5h) + Intl(1.5h) + Science(1.5h) + Geo(1h) + Ethics(0.5h) +
+        Revision(1h) &nbsp;|&nbsp;
+        <strong style="color:#f1f5f9">SUN:</strong> Bangla(1.5h) + English(1.5h) + Intl(1h) + Mental(1h) + Mock(2h)
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHEDULE -->
+  <div class="schedule-wrap">
+
+
+    <div class="phase-header ph1">
+      <div>
+        <div class="ph-num">Phase 01</div>
+        <div class="ph-title">Phase 1 — Foundation</div>
+      </div>
+      <div class="ph-weeks">Wk 1–6</div>
+    </div>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 1</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Bangla
+            Language Basics + English Grammar Foundation</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: প্রয়োগ-অপপ্রয়োগ, বানান শুদ্ধি<small>1.5h</small></span><span
+              class="pill p-english">English: Noun: Determiner, Gender, Number<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: পরিভাষা, সমার্থক ও বিপরীতার্থক শব্দ<small>1.5h</small></span><span
+              class="pill p-english">English: Pronoun + Verb: Finite, Non-finite<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: প্রাচীন ইতিহাস → মুঘল আমল<small>1.5h</small></span><span
+              class="pill p-math">Math: বাস্তব সংখ্যা, ল.সা.গু, গ.সা.গু<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: বৈশ্বিক ইতিহাস: WW1, WW2<small>1.5h</small></span><span
+              class="pill p-geo">Geography: BD ভৌগোলিক অবস্থান, সীমানা<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: Linking Verb + Phrasal Verb + Modals<small>1.5h</small></span><span
+              class="pill p-math">Math: শতকরা, সরল ও যৌগিক মুনাফা<small>1h</small></span><span
+              class="pill p-science">Science: পদার্থের অবস্থা, এটমের গঠন<small>1h</small></span><span
+              class="pill p-computer">Computer: Peripherals: Keyboard, Mouse, OCR<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: ব্রিটিশ আমল, ভাষা
+              আন্দোলন<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Cold War + Post-Cold War
+              ব্যবস্থা<small>1.5h</small></span><span class="pill p-science">Science: এসিড, ক্ষার, লবণ, কার্বনের
+              ব্যবহার<small>1.5h</small></span><span class="pill p-geo">Geography: ভৌত পরিবেশ (ভূ-প্রাকৃতিক) +
+              সম্পদ<small>1h</small></span><span class="pill p-ethics">Ethics: Definition of Values & Good
+              Governance<small>0.5h</small></span><span class="pill p-revision">Revision: W1 দুর্বল টপিক চিহ্নিত ও
+              পর্যালোচনা<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: ধ্বনি, বর্ণ, শব্দ,
+              পদ<small>1.5h</small></span><span class="pill p-english">English: Adjective + Adverb + Preposition +
+              Conjunction<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: UN সিস্টেম: Security Council,
+              GA<small>1h</small></span><span class="pill p-mental">Mental: Verbal Reasoning: Analogy +
+              Series<small>1h</small></span><span class="pill p-mock">Mini Mock: Bangla Lang + English Grammar
+              MCQ<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 2</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Bangla
+            Literature + English Sentences & Words</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: বাক্য শুদ্ধি, প্রত্যয়, সন্ধি<small>1.5h</small></span><span
+              class="pill p-english">English: Idioms & Phrases: Meanings, Kinds<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: সমাস (সম্পূর্ণ অধ্যায়)<small>1.5h</small></span><span
+              class="pill p-english">English: Clauses: Noun, Adjective, Adverbial<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: ১৯৫৪ নির্বাচন + গণ অভ্যুত্থান ১৯৬৯<small>1.5h</small></span><span
+              class="pill p-math">Math: অনুপাত ও সমানুপাত, লাভ-ক্ষতি<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: আন্তর্জাতিক নিরাপত্তা + ক্ষমতা
+              সম্পর্ক<small>1.5h</small></span><span class="pill p-geo">Geography: BD পরিবেশ: প্রকৃতি, সম্পদ,
+              চ্যালেঞ্জ<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: Corrections: Tense, Verb, Preposition,
+              SVA<small>1.5h</small></span><span class="pill p-math">Math: বীজগাণিতিক সূত্রাবলি + বহুপদী
+              উৎপাদক<small>1h</small></span><span class="pill p-science">Science: তড়িৎ কোষ + জারণ-বিজারণ + অজৈব
+              যৌগ<small>1h</small></span><span class="pill p-computer">Computer: Architecture: CPU, ALU, Hard
+              Disk<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: মুক্তিযুদ্ধ: ইতিহাস +
+              রণকৌশল<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: IMF, World Bank, WTO —
+              কার্যক্রম<small>1.5h</small></span><span class="pill p-science">Science: তরঙ্গ, শব্দ, তাপ, আলোর
+              প্রকৃতি<small>1.5h</small></span><span class="pill p-geo">Geography: বৈশ্বিক পরিবেশ পরিবর্তন +
+              জলবায়ু<small>1h</small></span><span class="pill p-ethics">Ethics: Relation between Values & Good
+              Governance<small>0.5h</small></span><span class="pill p-revision">Revision: W2 দুর্বল টপিক + শর্ট নোট
+              তৈরি<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: সাহিত্য: প্রাচীন যুগ — চর্যাপদ,
+              মঙ্গলকাব্য<small>1.5h</small></span><span class="pill p-english">English: Sentences: Simple, Compound,
+              Complex + Active/Passive<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: SAARC, ASEAN,
+              EU, OIC — সদরদপ্তর<small>1h</small></span><span class="pill p-mental">Mental: Verbal Reasoning:
+              Classification + Odd-One-Out<small>1h</small></span><span class="pill p-mock">Mini Mock: BD Affairs + Intl
+              Affairs (40 MCQ)<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 3</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Bangla Lit
+            Modern + English Literature + BD Constitution</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: সাহিত্য: মধ্যযুগ — বৈষ্ণব পদাবলী,
+              মঙ্গলকাব্য<small>1.5h</small></span><span class="pill p-english">English: Words: Synonyms, Antonyms,
+              Spellings<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: সাহিত্য: আধুনিক — রবীন্দ্রনাথ, বঙ্কিম,
+              মাইকেল<small>1.5h</small></span><span class="pill p-english">English: Words: Prefixes, Suffixes +
+              Usage<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: মুক্তিযুদ্ধে বৃহৎ শক্তির ভূমিকা +
+              আত্মসমর্পণ<small>1.5h</small></span><span class="pill p-math">Math: সমীকরণ (সরল ও দ্বিপদী) +
+              অসমতা<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: ভূ-রাজনীতি: মধ্যপ্রাচ্য, দক্ষিণ
+              এশিয়া<small>1.5h</small></span><span class="pill p-geo">Geography: প্রাকৃতিক দুর্যোগ: ধরন, প্রকৃতি,
+              ব্যবস্থাপনা<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: Lit: Elizabethan Period — Shakespeare,
+              Marlowe<small>1.5h</small></span><span class="pill p-math">Math: সরল সহসমীকরণ + সূচক ও
+              লগারিদম<small>1h</small></span><span class="pill p-science">Science: চুম্বকত্ব, তড়িৎ,
+              ইলেকট্রনিক্স<small>1h</small></span><span class="pill p-computer">Computer: Number Systems + Operating
+              Systems<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: সংবিধান: প্রস্তাবনা, মৌলিক
+              অধিকার<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: পরিবেশ চুক্তি: Paris, Kyoto,
+              SDG<small>1.5h</small></span><span class="pill p-science">Science: শক্তির উৎস: নবায়নযোগ্য, পারমাণবিক,
+              খনিজ<small>1.5h</small></span><span class="pill p-geo">Geography: BD অর্থনৈতিক ভূগোল: নদী, কৃষি,
+              বন<small>1h</small></span><span class="pill p-ethics">Ethics: Importance of Values in individual &
+              society<small>0.5h</small></span><span class="pill p-revision">Revision: W3 review + শর্ট নোট
+              আপডেট<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: সাহিত্য: নজরুল, জীবনানন্দ +
+              সমসাময়িক<small>1.5h</small></span><span class="pill p-english">English: Lit: Romantic + Victorian Age —
+              writers & quotations<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: G7, G20, BRICS, SCO
+              — কার্যক্রম<small>1h</small></span><span class="pill p-mental">Mental: Problem Solving + Spelling &
+              Language<small>1h</small></span><span class="pill p-mock">Mini Mock: Bangla Lit + English Lit (40
+              MCQ)<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 4</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">BD Politics &
+            Government + English Literature Deep + Intl Orgs</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: ভাষা: পুনরালোচনা — সন্ধি, সমাস speed
+              drill<small>1.5h</small></span><span class="pill p-english">English: Lit: 20th–21st Century writers +
+              drama<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: সাহিত্য: লেখক-রচনা matching drill<small>1.5h</small></span><span
+              class="pill p-english">English: Lit: Poetry quotations from all ages<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: সংবিধান সংশোধনীসমূহ (১ম–১৭তম)<small>1.5h</small></span><span
+              class="pill p-math">Math: সমান্তর ও গুণোত্তর ধারা<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: আন্তর্জাতিক আদালত + মানবাধিকার
+              সংস্থা<small>1.5h</small></span><span class="pill p-geo">Geography: বিশ্বের মহাদেশ, মহাসাগর, গুরুত্বপূর্ণ
+              প্রণালী<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: Grammar: পুনরালোচনা — দুর্বল অংশ
+              drill<small>1.5h</small></span><span class="pill p-math">Math: রেখা, কোণ, ত্রিভুজ সংক্রান্ত
+              উপপাদ্য<small>1h</small></span><span class="pill p-science">Science: জীব বিজ্ঞান: টিস্যু, জেনেটিক্স,
+              জীববৈচিত্র্য<small>1h</small></span><span class="pill p-computer">Computer: Types of Computers + History +
+              Embedded<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: রাজনৈতিক দল, সুশীল সমাজ + সরকার
+              কাঠামো<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: সাম্প্রতিক বিশ্ব ঘটনাপ্রবাহ (last
+              6 months)<small>1.5h</small></span><span class="pill p-science">Science: ভাইরাস, ব্যাকটেরিয়া + সংক্রামক
+              রোগ<small>1.5h</small></span><span class="pill p-geo">Geography: বাংলাদেশের প্রশাসনিক বিভাগ + গুরুত্বপূর্ণ
+              স্থান<small>1h</small></span><span class="pill p-ethics">Ethics: Impact of Values on national
+              development<small>0.5h</small></span><span class="pill p-revision">Revision: W4 দুর্বল টপিক + Phase 1
+              progress check<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: 30-mark Full Mock Test (ভাষা +
+              সাহিত্য)<small>1.5h</small></span><span class="pill p-english">English: 30-mark Full Mock Test (Language +
+              Literature)<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Current affairs: BD + World
+              weekly update<small>1h</small></span><span class="pill p-mental">Mental: Mechanical Reasoning + Space
+              Relation<small>1h</small></span><span class="pill p-mock">Phase Mock: Bangla+English Full Mock
+              Analysis<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 5</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">BD Economy &
+            Geography + Math Geometry + Science Bio</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: বানান নিয়ম: কঠিন শব্দ তালিকা (100
+              words)<small>1.5h</small></span><span class="pill p-english">English: Vocabulary sprint: 50
+              synonyms/antonyms<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: সাহিত্য: বিশেষ লেখক — হুমায়ূন আহমেদ, সেলিম আল
+              দীন<small>1.5h</small></span><span class="pill p-english">English: Tense correction + Subject-Verb
+              Agreement drill<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: কৃষিজ সম্পদ + শস্য বহুমুখীকরণ + খাদ্য
+              ব্যবস্থাপনা<small>1.5h</small></span><span class="pill p-math">Math: পিথাগোরাস + চতুর্ভুজ + বৃত্ত
+              উপপাদ্য<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: NATO, QUAD, SCO + সামরিক জোট<small>1.5h</small></span><span
+              class="pill p-geo">Geography: বিশ্বের গুরুত্বপূর্ণ নদী, পর্বত, মরুভূমি<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: Degrees of Comparison + Voice
+              intensive<small>1.5h</small></span><span class="pill p-math">Math: পরিমিতি: সরলক্ষেত্র,
+              ঘনবস্তু<small>1h</small></span><span class="pill p-science">Science: রক্ত, হৃদপিণ্ড, স্নায়ু,
+              ইন্দ্রিয়<small>1h</small></span><span class="pill p-computer">Computer: Virus, Firewall + Database
+              System<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: জনসংখ্যা + নৃগোষ্ঠী + অর্থনীতি
+              overview<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: পরিবেশগত ইস্যু +
+              কূটনীতি<small>1.5h</small></span><span class="pill p-science">Science: খাদ্য, পুষ্টি, ভিটামিন +
+              মাইক্রোবায়োলজি<small>1.5h</small></span><span class="pill p-geo">Geography: জলবায়ু পরিবর্তন: কারণ,
+              প্রভাব, অভিযোজন<small>1h</small></span><span class="pill p-ethics">Ethics: Good Governance: elements +
+              social context<small>0.5h</small></span><span class="pill p-revision">Revision: W5 নোট তৈরি + BD Affairs
+              summary<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: ভাষা + সাহিত্য combined MCQ sprint (45 min
+              each)<small>1.5h</small></span><span class="pill p-english">English: Grammar + Literature combined MCQ
+              sprint<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: 25-mark Intl Affairs mock
+              test<small>1h</small></span><span class="pill p-mental">Mental: Numerical Ability: patterns, data
+              sufficiency<small>1h</small></span><span class="pill p-mock">BD Mock: BD Affairs 25-mark mock test +
+              analysis<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 6</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Phase 1
+            Consolidation — Grand Mock + Weak Area Drill</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: দুর্বল টপিক: W1–W5 analysis থেকে<small>1.5h</small></span><span
+              class="pill p-english">English: দুর্বল টপিক: W1–W5 analysis থেকে<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: Previous year MCQ: বাংলা ভাষা (40 MCQ)<small>1.5h</small></span><span
+              class="pill p-english">English: Previous year MCQ: English (40 MCQ)<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: Previous year MCQ: BD Affairs (30 MCQ)<small>1.5h</small></span><span
+              class="pill p-math">Math: সেট + বিন্যাস ও সমাবেশ<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: Previous year MCQ: Intl Affairs (30
+              MCQ)<small>1.5h</small></span><span class="pill p-geo">Geography: দুর্যোগ ব্যবস্থাপনা: বাংলাদেশ
+              context<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: Composition: Letter/Paragraph naming
+              drill<small>1.5h</small></span><span class="pill p-math">Math: পরিসংখ্যান +
+              সম্ভাব্যতা<small>1h</small></span><span class="pill p-science">Science: আধুনিক বিজ্ঞান: Space, Black Hole,
+              Higgs Boson<small>1h</small></span><span class="pill p-computer">Computer: E-Commerce + Cellular Networks
+              (2G/3G/4G)<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: BD শিল্প, বাণিজ্য, গার্মেন্টস,
+              রপ্তানি<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Current affairs blitz: সাপ্তাহিক
+              গুরুত্বপূর্ণ খবর<small>1.5h</small></span><span class="pill p-science">Science: এপিকালচার, সেরিকালচার,
+              পিসিকালচার facts<small>1.5h</small></span><span class="pill p-geo">Geography: BD ভৌগোলিক তথ্য: আয়তন, নদী,
+              জনসংখ্যা<small>1h</small></span><span class="pill p-ethics">Ethics: Cost of absence of Good
+              Governance<small>0.5h</small></span><span class="pill p-revision">Revision: Phase 1 সম্পূর্ণ শর্ট নোট
+              review<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: Phase 1 Grand Mock: পূর্ণ
+              সিলেবাস<small>1.5h</small></span><span class="pill p-english">English: Phase 1 Grand Mock: পূর্ণ
+              সিলেবাস<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Intl Affairs পুনরালোচনা +
+              নোট<small>1h</small></span><span class="pill p-mental">Mental: Full pattern drill: সকল 6
+              ধরন<small>1h</small></span><span class="pill p-mock">GRAND MOCK: Phase 1 Full 110-mark Mock +
+              Analysis<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="phase-header ph2">
+      <div>
+        <div class="ph-num">Phase 02</div>
+        <div class="ph-title">Phase 2 — Coverage</div>
+      </div>
+      <div class="ph-weeks">Wk 7–12</div>
+    </div>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 7</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Science
+            Physical Deep + BD Affairs Revision + Math Algebra</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: ভাষা: শর্ট নোট পড়া + 20 MCQ sprint<small>1.5h</small></span><span
+              class="pill p-english">English: Grammar শর্ট নোট পড়া + 20 MCQ sprint<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: সাহিত্য: শর্ট নোট পড়া + 20 MCQ sprint<small>1.5h</small></span><span
+              class="pill p-english">English: Literature শর্ট নোট পড়া + 20 MCQ sprint<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: সংবিধান re-drill: অনুচ্ছেদ ও সংশোধনী<small>1.5h</small></span><span
+              class="pill p-math">Math: বীজগণিত পুনরালোচনা: সকল সূত্র<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: বৈশ্বিক অর্থনৈতিক প্রতিষ্ঠান
+              বিস্তারিত<small>1.5h</small></span><span class="pill p-geo">Geography: টেকটোনিক প্লেট + ভূমিকম্প +
+              সুনামি<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: Clause transformation speed test (30
+              MCQ)<small>1.5h</small></span><span class="pill p-math">Math: জ্যামিতি পুনরালোচনা + 20
+              MCQ<small>1h</small></span><span class="pill p-science">Science: তড়িৎ + ইলেকট্রনিক্স + চুম্বকত্ব
+              deep<small>1h</small></span><span class="pill p-computer">Computer: LAN, MAN, WiFi + Internet +
+              WWW<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: রাজনৈতিক ইতিহাস timeline speed
+              test<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Human Rights + International
+              Law<small>1.5h</small></span><span class="pill p-science">Science: আলোক যন্ত্রপাতি + ট্রান্সফর্মার +
+              X-ray<small>1.5h</small></span><span class="pill p-geo">Geography: বায়ুমণ্ডল + আবহাওয়া + জলবায়ু
+              অঞ্চল<small>1h</small></span><span class="pill p-ethics">Ethics: UN/UNDP/WB GG documents
+              overview<small>0.5h</small></span><span class="pill p-revision">Revision: W7 নোট + Phase 1 subjects quick
+              recap<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: বানান + প্রত্যয় intensive 30
+              MCQ<small>1.5h</small></span><span class="pill p-english">English: Words: Spellings + Antonyms
+              intensive<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: SAARC, ASEAN সদস্য + summit
+              history<small>1h</small></span><span class="pill p-mental">Mental: Verbal Reasoning intensive: 30 min
+              sprint<small>1h</small></span><span class="pill p-mock">Mini Mock: Science Physical Part (30
+              MCQ)<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 8</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Science
+            Biology + Computer ICT + Geography Full</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: সাহিত্য: লেখক-সময়কাল matching 30 MCQ<small>1.5h</small></span><span
+              class="pill p-english">English: Grammar: Parts of Speech speed 30 MCQ<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: ভাষা: সমাস + সন্ধি MCQ intensive<small>1.5h</small></span><span
+              class="pill p-english">English: Sentences & Transformation 30 MCQ<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: BD অর্থনীতি: GDP, বাজেট, দারিদ্র্য
+              হ্রাস<small>1.5h</small></span><span class="pill p-math">Math: সেট theory + বিন্যাস ও
+              সমাবেশ<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: সাম্প্রতিক সংঘাত: ইউক্রেন, মধ্যপ্রাচ্য
+              update<small>1.5h</small></span><span class="pill p-geo">Geography: মৌসুমি বায়ু + বাংলাদেশে
+              প্রভাব<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: Literature: quotation matching drill<small>1.5h</small></span><span
+              class="pill p-math">Math: পরিসংখ্যান পুনরালোচনা + সম্ভাব্যতা<small>1h</small></span><span
+              class="pill p-science">Science: জীব বিজ্ঞান: অর্গান সিস্টেম + সালোক সংশ্লেষণ<small>1h</small></span><span
+              class="pill p-computer">Computer: Cloud Computing + Social Networking + Robotics<small>0.5h</small></span>
+          </td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: BD জাতীয় অর্জন + পুরস্কার + বিশিষ্ট
+              ব্যক্তিত্ব<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Current affairs: weekly
+              গুরুত্বপূর্ণ আপডেট<small>1.5h</small></span><span class="pill p-science">Science: রক্ত + রক্তচাপ + হৃদরোগ
+              + স্নায়ুরোগ<small>1.5h</small></span><span class="pill p-geo">Geography: বিশ্বের দেশ: রাজধানী, মুদ্রা,
+              ভাষা (key)<small>1h</small></span><span class="pill p-ethics">Ethics: Ethics পূর্ণ অধ্যায়
+              পুনরালোচনা<small>0.5h</small></span><span class="pill p-revision">Revision: W8 নোট + Science সম্পূর্ণ
+              summary<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: 30-mark Bangla re-mock (compare
+              W4)<small>1.5h</small></span><span class="pill p-english">English: 30-mark English re-mock (compare
+              W4)<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: সংগঠন + ভূ-রাজনীতি combined 25
+              MCQ<small>1h</small></span><span class="pill p-mental">Mental: Problem Solving + Space Relation
+              drill<small>1h</small></span><span class="pill p-mock">Mini Mock: Science Biology + Geography (30
+              MCQ)<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 9</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Computer ICT
+            Deep + Mental Ability + Math Geometry</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: Previous year MCQ: নতুন সেট (40 MCQ)<small>1.5h</small></span><span
+              class="pill p-english">English: Previous year MCQ: নতুন সেট (40 MCQ)<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: ভাষা: অব্যয়, উক্তি, বাগধারা<small>1.5h</small></span><span
+              class="pill p-english">English: Composition: formal letter + paragraph structure<small>1h</small></span>
+          </td>
+          <td><span class="pill p-bd">BD Affairs: BD সরকার: আইন, নীতি নির্ধারণ, প্রশাসন<small>1.5h</small></span><span
+              class="pill p-math">Math: বৃত্ত + পরিমিতি পুনরালোচনা<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: আন্তর্জাতিক কূটনীতি: দ্বিপাক্ষিক,
+              বহুপাক্ষিক<small>1.5h</small></span><span class="pill p-geo">Geography: বাংলাদেশের শিল্পাঞ্চল +
+              EPZ<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: Degrees + Voice transformation 30 MCQ
+              speed<small>1.5h</small></span><span class="pill p-math">Math: সকল অধ্যায় মিশ্র 30 MCQ
+              timed<small>1h</small></span><span class="pill p-science">Science: আধুনিক বিজ্ঞান: বিবর্তন, সামুদ্রিক
+              জীবন<small>1h</small></span><span class="pill p-computer">Computer: Tech Giants: Google, Microsoft, IBM +
+              Cyber Crime<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: BD স্থানীয় সরকার + প্রশাসনিক
+              পুনর্বিন্যাস<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: মানবাধিকার + শরণার্থী সংকট
+              বৈশ্বিক<small>1.5h</small></span><span class="pill p-science">Science: মা ও শিশু স্বাস্থ্য + টিকা +
+              HIV/AIDS<small>1.5h</small></span><span class="pill p-geo">Geography: বিশ্বের খনিজ সম্পদ +
+              জ্বালানি<small>1h</small></span><span class="pill p-ethics">Ethics: Ethics MCQ: previous year
+              প্র্যাকটিস<small>0.5h</small></span><span class="pill p-revision">Revision: Computer + ICT সম্পূর্ণ নোট
+              review<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: সাহিত্য: drama + novel writers
+              বিস্তারিত<small>1.5h</small></span><span class="pill p-english">English: Literature: Poetry analysis +
+              quotation list<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: 25-mark Intl re-mock
+              (compare W5)<small>1h</small></span><span class="pill p-mental">Mental: 15-mark Mental Ability Full
+              Mock<small>1h</small></span><span class="pill p-mock">Computer Mock: Computer + ICT 15-mark mock +
+              analysis<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 10</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Geography +
+            Ethics + Science Modern + BD Sports & Awards</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: সাহিত্য: ছোটগল্প লেখক + উপন্যাসিক
+              তালিকা<small>1.5h</small></span><span class="pill p-english">English: Grammar: Relative clause + Adverbial
+              clause drill<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: ভাষা: বিরাম চিহ্ন + বাক্য রূপান্তর<small>1.5h</small></span><span
+              class="pill p-english">English: Words: word formation drill + usage<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: BD খেলাধুলা + গণমাধ্যম + চলচ্চিত্র<small>1.5h</small></span><span
+              class="pill p-math">Math: Geometry: দুর্বল উপপাদ্য targeted drill<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: বৈশ্বিক প্রযুক্তি + AI + Space race<small>1.5h</small></span><span
+              class="pill p-geo">Geography: 10-mark Geography Full Mock Test<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: Previous year MCQ: English Literature (30
+              MCQ)<small>1.5h</small></span><span class="pill p-math">Math: 20-mark Math Full Mock
+              Test<small>1h</small></span><span class="pill p-science">Science: Science: পিসিকালচার, এপিকালচার,
+              জোয়ার-ভাটা<small>1h</small></span><span class="pill p-computer">Computer: Computer 15-mark Full Mock
+              Test<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: 25-mark BD Affairs Full Mock
+              Test<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: 25-mark Intl Full Mock
+              Test<small>1.5h</small></span><span class="pill p-science">Science: 15-mark Science Full Mock
+              Test<small>1.5h</small></span><span class="pill p-geo">Geography: Geography + Environment: দুর্বল টপিক
+              drill<small>1h</small></span><span class="pill p-ethics">Ethics: Ethics: 15-mark Full Mock
+              Test<small>0.5h</small></span><span class="pill p-revision">Revision: সকল mock আনালাইসিস + নোট
+              আপডেট<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: Bangla 30-mark Full Mock
+              Test<small>1.5h</small></span><span class="pill p-english">English: English 30-mark Full Mock
+              Test<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Current affairs: সাপ্তাহিক বিশেষ
+              update<small>1h</small></span><span class="pill p-mental">Mental: Mental Ability re-mock (15
+              marks)<small>1h</small></span><span class="pill p-mock">Phase Mock: Phase 2 Progress Mock: All subjects
+              analysis<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 11</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">All Subjects
+            Speed Drill — Timed MCQ Week</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: Bangla ভাষা: 20 MCQ (15 min) speed<small>1.5h</small></span><span
+              class="pill p-english">English: English Grammar: 20 MCQ (15 min) speed<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: Bangla সাহিত্য: 20 MCQ speed drill<small>1.5h</small></span><span
+              class="pill p-english">English: English Literature: 20 MCQ speed drill<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: BD MCQ: 25 MCQ (20 min) timed<small>1.5h</small></span><span
+              class="pill p-math">Math: Math: 20 MCQ (20 min) timed<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: Intl: 25 MCQ (20 min) timed<small>1.5h</small></span><span
+              class="pill p-geo">Geography: Geography: 10 MCQ timed<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: English: combined 30 MCQ timed<small>1.5h</small></span><span
+              class="pill p-math">Math: Math: দুর্বল অধ্যায় 20 MCQ<small>1h</small></span><span
+              class="pill p-science">Science: Science: 15 MCQ (15 min) timed<small>1h</small></span><span
+              class="pill p-computer">Computer: Computer: 15 MCQ timed<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: BD re-mock comparison (W6 vs W10 vs
+              now)<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Intl re-mock
+              comparison<small>1.5h</small></span><span class="pill p-science">Science: Science re-mock (15
+              marks)<small>1.5h</small></span><span class="pill p-geo">Geography: Geography re-mock (10
+              marks)<small>1h</small></span><span class="pill p-ethics">Ethics: Ethics re-mock (15
+              marks)<small>0.5h</small></span><span class="pill p-revision">Revision: সকল re-mock analysis + দুর্বলতা
+              তালিকা<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: Bangla দুর্বল টপিক intensive 2h
+              drill<small>1.5h</small></span><span class="pill p-english">English: English দুর্বল টপিক intensive 2h
+              drill<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Intl দুর্বল টপিক + recent
+              news<small>1h</small></span><span class="pill p-mental">Mental: Mental: দুর্বল pattern
+              intensive<small>1h</small></span><span class="pill p-mock">200-mark Mock: Full 200-mark Grand Mock
+              #1<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 12</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Grand Mock #1
+            Analysis + Targeted Weak Subject Repair</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: Grand Mock #1 ভুল উত্তর বিশ্লেষণ:
+              Bangla<small>1.5h</small></span><span class="pill p-english">English: Grand Mock #1 ভুল উত্তর বিশ্লেষণ:
+              English<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: Bangla দুর্বল টপিক: targeted re-study<small>1.5h</small></span><span
+              class="pill p-english">English: English দুর্বল টপিক: targeted re-study<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: BD দুর্বল টপিক: targeted re-study<small>1.5h</small></span><span
+              class="pill p-math">Math: Math দুর্বল অধ্যায়: targeted re-study<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: Intl দুর্বল টপিক: targeted re-study<small>1.5h</small></span><span
+              class="pill p-geo">Geography: Geography দুর্বল টপিক<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: English সম্পূর্ণ শর্ট নোট 1-page তৈরি<small>1.5h</small></span><span
+              class="pill p-math">Math: Math সম্পূর্ণ শর্ট নোট 1-page তৈরি<small>1h</small></span><span
+              class="pill p-science">Science: Science দুর্বল টপিক re-study<small>1h</small></span><span
+              class="pill p-computer">Computer: Computer + ICT শর্ট নোট 1-page<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: BD সম্পূর্ণ 1-page শর্ট নোট
+              তৈরি<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Intl সম্পূর্ণ 1-page শর্ট নোট
+              তৈরি<small>1.5h</small></span><span class="pill p-science">Science: Science সম্পূর্ণ 1-page শর্ট নোট
+              তৈরি<small>1.5h</small></span><span class="pill p-geo">Geography: Geography 1-page নোট
+              তৈরি<small>1h</small></span><span class="pill p-ethics">Ethics: Ethics 1-page নোট
+              তৈরি<small>0.5h</small></span><span class="pill p-revision">Revision: সকল 1-page নোট একসাথে
+              review<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: Bangla 1-page শর্ট নোট
+              তৈরি<small>1.5h</small></span><span class="pill p-english">English: English 1-page শর্ট নোট
+              তৈরি<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Current affairs: গত 1 মাসের
+              গুরুত্বপূর্ণ<small>1h</small></span><span class="pill p-mental">Mental: Mental: নতুন pattern set
+              practice<small>1h</small></span><span class="pill p-mock">Grand Mock #2: 200-mark Full Mock + detailed
+              analysis<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="phase-header ph3">
+      <div>
+        <div class="ph-num">Phase 03</div>
+        <div class="ph-title">Phase 3 — Revision</div>
+      </div>
+      <div class="ph-weeks">Wk 13–18</div>
+    </div>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 13</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Systematic
+            Revision — Bangla + English Focus</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: ভাষা শর্ট নোট পড়া + 25 MCQ<small>1.5h</small></span><span
+              class="pill p-english">English: Grammar শর্ট নোট পড়া + 25 MCQ<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: সাহিত্য শর্ট নোট পড়া + 25 MCQ<small>1.5h</small></span><span
+              class="pill p-english">English: Literature শর্ট নোট পড়া + 25 MCQ<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: BD শর্ট নোট পড়া + 30 MCQ<small>1.5h</small></span><span
+              class="pill p-math">Math: Math শর্ট নোট পড়া + 25 MCQ<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: Intl শর্ট নোট পড়া + 30 MCQ<small>1.5h</small></span><span
+              class="pill p-geo">Geography: Geography শর্ট নোট পড়া + 10 MCQ<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: English: সকল grammar rules একসাথে speed
+              test<small>1.5h</small></span><span class="pill p-math">Math: Math: সকল অধ্যায় মিশ্র 30
+              MCQ<small>1h</small></span><span class="pill p-science">Science: Science শর্ট নোট পড়া + 20
+              MCQ<small>1h</small></span><span class="pill p-computer">Computer: Computer শর্ট নোট পড়া + 15
+              MCQ<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: BD: previous year MCQ নতুন সেট (35
+              MCQ)<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Intl: previous year MCQ নতুন সেট (35
+              MCQ)<small>1.5h</small></span><span class="pill p-science">Science: Science: previous year MCQ নতুন
+              সেট<small>1.5h</small></span><span class="pill p-geo">Geography: Geography: previous year
+              MCQ<small>1h</small></span><span class="pill p-ethics">Ethics: Ethics: previous year MCQ +
+              review<small>0.5h</small></span><span class="pill p-revision">Revision: W13 সকল subject score
+              tracking<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: Bangla: previous year MCQ নতুন সেট (40
+              MCQ)<small>1.5h</small></span><span class="pill p-english">English: English: previous year MCQ নতুন সেট
+              (40 MCQ)<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Current affairs sprint: 2 hours
+              intensive<small>1h</small></span><span class="pill p-mental">Mental: Mental: সকল 6 ধরন একসাথে
+              practice<small>1h</small></span><span class="pill p-mock">Grand Mock #3: 200-mark Mock +
+              analysis<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 14</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Revision — BD
+            + Intl + Geography + Ethics</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: Bangla: দুর্বল বিষয় (Grand Mock #3
+              থেকে)<small>1.5h</small></span><span class="pill p-english">English: English: দুর্বল বিষয় (Grand Mock #3
+              থেকে)<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: Bangla: ভাষা speed MCQ (30 MCQ, 20 min)<small>1.5h</small></span><span
+              class="pill p-english">English: English: Grammar speed MCQ (30 MCQ, 20 min)<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: BD: সকল টপিক দ্রুত পর্যালোচনা (নোট
+              দেখে)<small>1.5h</small></span><span class="pill p-math">Math: Math: সকল সূত্র + 20 MCQ final
+              drill<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: Intl: সংগঠন তালিকা + সাম্প্রতিক
+              আপডেট<small>1.5h</small></span><span class="pill p-geo">Geography: Geography: BD + World facts combined
+              MCQ<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: English Literature: key quotations
+              memorization<small>1.5h</small></span><span class="pill p-math">Math: Math: geometry + statistics final
+              drill<small>1h</small></span><span class="pill p-science">Science: Science: ভৌত + জীব + আধুনিক combined
+              MCQ<small>1h</small></span><span class="pill p-computer">Computer: Computer: সম্পূর্ণ নোট পড়া + 15
+              MCQ<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: BD: 25-mark revision
+              mock<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Intl: 25-mark revision
+              mock<small>1.5h</small></span><span class="pill p-science">Science: Science: 15-mark revision
+              mock<small>1.5h</small></span><span class="pill p-geo">Geography: Geography: 10-mark revision
+              mock<small>1h</small></span><span class="pill p-ethics">Ethics: Ethics: 15-mark revision
+              mock<small>0.5h</small></span><span class="pill p-revision">Revision: সকল revision mock analysis +
+              নোট<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: Bangla: 30-mark revision
+              mock<small>1.5h</small></span><span class="pill p-english">English: English: 30-mark revision
+              mock<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Intl: সকল সংগঠন final
+              MCQ<small>1h</small></span><span class="pill p-mental">Mental: Mental: 15-mark revision
+              mock<small>1h</small></span><span class="pill p-mock">Grand Mock #4: 200-mark Grand Mock + full
+              analysis<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 15</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Speed &
+            Accuracy Building — All Subjects</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: Bangla: 30 MCQ in 20 min (speed
+              training)<small>1.5h</small></span><span class="pill p-english">English: English: 30 MCQ in 20 min (speed
+              training)<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: Bangla: accuracy drill — কঠিন প্রশ্ন<small>1.5h</small></span><span
+              class="pill p-english">English: English: accuracy drill — কঠিন প্রশ্ন<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: BD: 25 MCQ in 18 min (speed training)<small>1.5h</small></span><span
+              class="pill p-math">Math: Math: 20 MCQ in 18 min (speed training)<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: Intl: 25 MCQ in 18 min (speed
+              training)<small>1.5h</small></span><span class="pill p-geo">Geography: Geography: 10 MCQ in 8 min
+              speed<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: English: mixed grammar + literature 40 MCQ
+              timed<small>1.5h</small></span><span class="pill p-math">Math: Math: accuracy drill — কঠিন
+              সমস্যা<small>1h</small></span><span class="pill p-science">Science: Science: 15 MCQ in 12 min
+              speed<small>1h</small></span><span class="pill p-computer">Computer: Computer: 15 MCQ in 12 min
+              speed<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: BD: accuracy drill — কঠিন MCQ
+              সেট<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Intl: accuracy drill + current
+              affairs<small>1.5h</small></span><span class="pill p-science">Science: Science: কঠিন প্রশ্ন accuracy
+              drill<small>1.5h</small></span><span class="pill p-geo">Geography: Geography: কঠিন প্রশ্ন
+              drill<small>1h</small></span><span class="pill p-ethics">Ethics: Ethics: accuracy drill + final
+              review<small>0.5h</small></span><span class="pill p-revision">Revision: সকল subject accuracy %
+              tracking<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: Bangla: কঠিন MCQ accuracy
+              drill<small>1.5h</small></span><span class="pill p-english">English: English: কঠিন MCQ accuracy
+              drill<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Intl + Current affairs
+              combined<small>1h</small></span><span class="pill p-mental">Mental: Mental: কঠিন pattern accuracy
+              drill<small>1h</small></span><span class="pill p-mock">Grand Mock #5: 200-mark Mock (strict exam
+              conditions)<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 16</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Current
+            Affairs Intensive + Final Revision</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: Bangla: শেষ revision — পুরো নোট<small>1.5h</small></span><span
+              class="pill p-english">English: English: শেষ revision — পুরো নোট<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: Bangla: নতুন previous year MCQ সেট<small>1.5h</small></span><span
+              class="pill p-english">English: English: নতুন previous year MCQ সেট<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: BD: current affairs + নতুন সরকারি তথ্য<small>1.5h</small></span><span
+              class="pill p-math">Math: Math: পূর্ণ নোট পড়া + 20 MCQ<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: Intl: last 3 months current affairs
+              বিস্তারিত<small>1.5h</small></span><span class="pill p-geo">Geography: Geography: পূর্ণ নোট পড়া + 10
+              MCQ<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: English: পূর্ণ নোট পড়া + 30 MCQ<small>1.5h</small></span><span
+              class="pill p-math">Math: Math: শেষ drill — সব অধ্যায়<small>1h</small></span><span
+              class="pill p-science">Science: Science: পূর্ণ নোট পড়া + 15 MCQ<small>1h</small></span><span
+              class="pill p-computer">Computer: Computer: পূর্ণ নোট পড়া + 15 MCQ<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: BD + Intl current affairs: গত 6 মাস
+              summary<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Intl: সংগঠন + ভূ-রাজনীতি final
+              recap<small>1.5h</small></span><span class="pill p-science">Science: Science: শেষ revision +
+              MCQ<small>1.5h</small></span><span class="pill p-geo">Geography: Geography + Ethics: combined
+              revision<small>1h</small></span><span class="pill p-ethics">Ethics: Ethics: পূর্ণ নোট
+              পড়া<small>0.5h</small></span><span class="pill p-revision">Revision: সিলেবাস checklist: সব পড়া হয়েছে
+              কিনা<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: Bangla: শেষ 30-mark
+              mock<small>1.5h</small></span><span class="pill p-english">English: English: শেষ 30-mark
+              mock<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Intl: শেষ 25-mark
+              mock<small>1h</small></span><span class="pill p-mental">Mental: Mental: শেষ 15-mark
+              mock<small>1h</small></span><span class="pill p-mock">Grand Mock #6: 200-mark Final Phase
+              Mock<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="phase-header ph4">
+      <div>
+        <div class="ph-num">Phase 04</div>
+        <div class="ph-title">Phase 4 — Mock & Polish</div>
+      </div>
+      <div class="ph-weeks">Wk 19–26</div>
+    </div>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 17</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Phase 4 Start
+            — Daily Drills + Weekend Grand Mocks</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: Daily 30 MCQ timed drill<small>1.5h</small></span><span
+              class="pill p-english">English: Daily 30 MCQ timed drill<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: Accuracy: hardest Bangla questions<small>1.5h</small></span><span
+              class="pill p-english">English: Accuracy: hardest English questions<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: BD: 25 MCQ daily drill<small>1.5h</small></span><span
+              class="pill p-math">Math: Math: 20 MCQ daily drill<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: Intl: 25 MCQ + current affairs<small>1.5h</small></span><span
+              class="pill p-geo">Geography: Geography: 10 MCQ daily drill<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: English: mixed 30 MCQ<small>1.5h</small></span><span
+              class="pill p-math">Math: Math: কঠিন সমস্যা drill<small>1h</small></span><span
+              class="pill p-science">Science: Science: 15 MCQ daily drill<small>1h</small></span><span
+              class="pill p-computer">Computer: Computer: 15 MCQ daily drill<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: BD: 25 MCQ speed +
+              accuracy<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Intl: 25 MCQ speed +
+              accuracy<small>1.5h</small></span><span class="pill p-science">Science: Science: 15 MCQ speed
+              drill<small>1.5h</small></span><span class="pill p-geo">Geography: Geography: 10 MCQ
+              drill<small>1h</small></span><span class="pill p-ethics">Ethics: Ethics: 15 MCQ
+              drill<small>0.5h</small></span><span class="pill p-revision">Revision: সকল subject নোট দ্রুত
+              পড়া<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: Bangla: 30 MCQ speed<small>1.5h</small></span><span
+              class="pill p-english">English: English: 30 MCQ speed<small>1.5h</small></span><span
+              class="pill p-intl">Intl Affairs: Current affairs: intensive 1h<small>1h</small></span><span
+              class="pill p-mental">Mental: Mental: 15 MCQ speed drill<small>1h</small></span><span
+              class="pill p-mock">Grand Mock #7: 200-mark Mock — strict timing<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th class="row-label" style="color:#94a3b8!important">WEEK 18</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Mock Analysis
+            + Weak Area Final Push</th>
+        </tr>
+        <tr>
+          <th class="row-label">TIME</th>
+          <th>MON <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>TUE <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>WED <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>THU <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th>FRI <span style="opacity:.5;font-size:9px">2–3h</span></th>
+          <th class="wkend">SAT <span style="opacity:.5;font-size:9px">6h</span></th>
+          <th class="wkend">SUN <span style="opacity:.5;font-size:9px">6h</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">TOPICS</td>
+          <td><span class="pill p-bangla">Bangla: Mock #7 analysis: Bangla ভুল বিশ্লেষণ<small>1.5h</small></span><span
+              class="pill p-english">English: Mock #7 analysis: English ভুল বিশ্লেষণ<small>1h</small></span></td>
+          <td><span class="pill p-bangla">Bangla: Bangla: শেষ দুর্বল টপিক push<small>1.5h</small></span><span
+              class="pill p-english">English: English: শেষ দুর্বল টপিক push<small>1h</small></span></td>
+          <td><span class="pill p-bd">BD Affairs: BD: শেষ দুর্বল টপিক push<small>1.5h</small></span><span
+              class="pill p-math">Math: Math: শেষ দুর্বল অধ্যায় push<small>1h</small></span></td>
+          <td><span class="pill p-intl">Intl Affairs: Intl: শেষ দুর্বল টপিক + news<small>1.5h</small></span><span
+              class="pill p-geo">Geography: Geography: শেষ drill<small>0.5h</small></span></td>
+          <td><span class="pill p-english">English: English: পূর্ণ নোট শেষবারের মতো পড়া<small>1.5h</small></span><span
+              class="pill p-math">Math: Math: সকল সূত্র মুখস্থ review<small>1h</small></span><span
+              class="pill p-science">Science: Science: শেষ দুর্বল টপিক<small>1h</small></span><span
+              class="pill p-computer">Computer: Computer: শেষ নোট পড়া<small>0.5h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bd">BD Affairs: BD + Intl: current affairs last 1
+              month<small>1.5h</small></span><span class="pill p-intl">Intl Affairs: Intl: সকল সংগঠন final
+              table<small>1.5h</small></span><span class="pill p-science">Science: Science: শেষ নোট
+              পড়া<small>1.5h</small></span><span class="pill p-geo">Geography: Geography + Ethics: শেষ
+              নোট<small>1h</small></span><span class="pill p-ethics">Ethics: Ethics: শেষ
+              revision<small>0.5h</small></span><span class="pill p-revision">Revision: সব subject শর্ট নোট final
+              pass<small>1h</small></span></td>
+          <td class="wkend-cell"><span class="pill p-bangla">Bangla: Bangla: শেষ 30 MCQ<small>1.5h</small></span><span
+              class="pill p-english">English: English: শেষ 30 MCQ<small>1.5h</small></span><span
+              class="pill p-intl">Intl Affairs: Intl: শেষ current affairs check<small>1h</small></span><span
+              class="pill p-mental">Mental: Mental: final pattern practice<small>1h</small></span><span
+              class="pill p-mock">Grand Mock #8: 200-mark Final Grand Mock<small>2h</small></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th style="color:#94a3b8!important;min-width:80px">WK 19–20</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Weeks 19–20:
+            Light Review + 2 Grand Mocks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">PLAN</td>
+          <td colspan="5" style="padding:14px 16px;font-size:12.5px;line-height:1.7;color:#1e293b">Daily: 30-min MCQ
+            drill (2 subjects/day rotation, all 10 subjects) + 15 min current affairs. Weekends: Grand Mock #9 (W19 Sun)
+            + Grand Mock #10 (W20 Sun). Saturday: subject-wise re-mocks + analysis.</td>
+          <td class="wkend-cell" style="padding:14px 12px">
+            <span class="pill p-revision">Sat: Subject re-mocks<small>5h</small></span>
+            <span class="pill p-mock">Sun: Grand Mock<small>3h + 3h analysis</small></span>
+          </td>
+          <td class="wkend-cell" style="padding:14px 12px">
+            <span class="pill p-bangla">Bangla sprint<small>1h</small></span>
+            <span class="pill p-english">English sprint<small>1h</small></span>
+            <span class="pill p-mental">Mental drill<small>0.5h</small></span>
+            <span class="pill p-revision">Current affairs<small>0.5h</small></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th style="color:#94a3b8!important;min-width:80px">WK 21–22</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Weeks 21–22:
+            Speed Maintenance + 2 Grand Mocks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">PLAN</td>
+          <td colspan="5" style="padding:14px 16px;font-size:12.5px;line-height:1.7;color:#1e293b">Daily: 20 MCQ timed
+            drill + 15 min news. Focus only on subjects still below 65% accuracy. Weekends: Grand Mock #11 (W21 Sun) +
+            Grand Mock #12 (W22 Sun). Zero new topics — only revision.</td>
+          <td class="wkend-cell" style="padding:14px 12px">
+            <span class="pill p-revision">Sat: Subject re-mocks<small>5h</small></span>
+            <span class="pill p-mock">Sun: Grand Mock<small>3h + 3h analysis</small></span>
+          </td>
+          <td class="wkend-cell" style="padding:14px 12px">
+            <span class="pill p-bangla">Bangla sprint<small>1h</small></span>
+            <span class="pill p-english">English sprint<small>1h</small></span>
+            <span class="pill p-mental">Mental drill<small>0.5h</small></span>
+            <span class="pill p-revision">Current affairs<small>0.5h</small></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th style="color:#94a3b8!important;min-width:80px">WK 23–24</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Weeks 23–24:
+            Pre-Exam Simulation + 2 Grand Mocks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">PLAN</td>
+          <td colspan="5" style="padding:14px 16px;font-size:12.5px;line-height:1.7;color:#1e293b">Daily: Alternate 2
+            weakest subjects each day (30 min each) + current affairs 15 min. Weekends: Grand Mock #13 (W23 Sun) + Grand
+            Mock #14 (W24 Sun). Track improvement across all 14 mocks.</td>
+          <td class="wkend-cell" style="padding:14px 12px">
+            <span class="pill p-revision">Sat: Subject re-mocks<small>5h</small></span>
+            <span class="pill p-mock">Sun: Grand Mock<small>3h + 3h analysis</small></span>
+          </td>
+          <td class="wkend-cell" style="padding:14px 12px">
+            <span class="pill p-bangla">Bangla sprint<small>1h</small></span>
+            <span class="pill p-english">English sprint<small>1h</small></span>
+            <span class="pill p-mental">Mental drill<small>0.5h</small></span>
+            <span class="pill p-revision">Current affairs<small>0.5h</small></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="week-table">
+      <thead>
+        <tr class="week-num-row">
+          <th style="color:#94a3b8!important;min-width:80px">WK 25–26</th>
+          <th colspan="7" style="color:#f1f5f9!important;font-size:12px;font-weight:600;letter-spacing:0">Weeks 25–26:
+            Final Countdown — Rest & Sharpen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label-cell">PLAN</td>
+          <td colspan="5" style="padding:14px 16px;font-size:12.5px;line-height:1.7;color:#1e293b">W25: Light daily MCQ
+            (10 per subject, 10 subjects = 100 MCQ/day). Grand Mock #15 (W25 Sat). W26: Read short notes ONLY. Grand
+            Mock #16 (W26 Sat = final simulation). W26 Sun: REST. No heavy study. Sleep well. আপনি প্রস্তুত! ✓</td>
+          <td class="wkend-cell" style="padding:14px 12px">
+            <span class="pill p-revision">Sat: Subject re-mocks<small>5h</small></span>
+            <span class="pill p-mock">Sun: Grand Mock<small>3h + 3h analysis</small></span>
+          </td>
+          <td class="wkend-cell" style="padding:14px 12px">
+            <span class="pill p-bangla">Bangla sprint<small>1h</small></span>
+            <span class="pill p-english">English sprint<small>1h</small></span>
+            <span class="pill p-mental">Mental drill<small>0.5h</small></span>
+            <span class="pill p-revision">Current affairs<small>0.5h</small></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- /schedule-wrap -->
+
+  <button class="dl-btn" onclick="window.print()">Print / Save PDF</button>
+
+</body>
+
+</html>
